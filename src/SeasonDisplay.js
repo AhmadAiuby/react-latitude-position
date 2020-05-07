@@ -13,10 +13,12 @@ const SeasonDisplay = (props) => {
     //function to be able to call the function from inside the component and 
     //the function "getSeason" be able to get the lat and month.
     const season = getSeason(props.lat, new Date().getMonth());
-
-    console.log(season);
+    const text = season === 'winter' ? 'Burr, it is chilly' : "Let's hit the beach"
+    
     return (
-        <div>Season Display</div>
+        <div>
+            <h1>{text}</h1>
+        </div>
     );
 };
 
